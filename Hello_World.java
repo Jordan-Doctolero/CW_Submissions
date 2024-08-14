@@ -1,7 +1,6 @@
 /*
  * This is the very first assignment.
  * It does two simple prints and then I will submit it.
- *Hi! Mr.Trauger!
  */
 public class Hello_World {
 
