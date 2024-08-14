@@ -1,6 +1,7 @@
 /*
  * This is the very first assignment.
  * It does two simple prints and then I will submit it.
+ *Hi! Mr.Trauger!
  */
 public class Hello_World {
 
@@ -12,6 +13,8 @@ public class Hello_World {
 		//Task 2:Print out "Hello World" and then print it again on the next line
 		System.out.println("Hello World!");
 		System.out.print("Hello World!");
+
+
 	}
 
 }
