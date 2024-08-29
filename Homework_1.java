@@ -12,11 +12,11 @@ public class Homework_1 {
 		/*
 		*This is my draft for my name in the code above.  
 		*OOOOO OOOOO   OOOO   OOOO
-		*	O	O    O O    O O    O
-		*	O	O    O O	O O
-		*	O	O    O O	O O
-		*O	O	O    O O    O O    O
-		* O	OOOOO   OOOO   OOOO
+		*  O   O    O O    O O    O
+		*  O   O    O O	   O O
+		*  O   O    O O	   O O
+		*O O   O    O O    O O    O
+		* O    OOOOO   OOOO   OOOO
 		* 
 		*/
 			
