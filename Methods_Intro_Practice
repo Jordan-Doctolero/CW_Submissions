@@ -1,5 +1,4 @@
 /*
- *Hi!
  * I created new methods outside the main method to do certain operations.
  * I called these new methods in the main method and when I needed to pass a variable, I gave it 
  * a value in the main method.
