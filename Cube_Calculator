@@ -2,7 +2,7 @@
 *This is a classwork assignment we did.
 *It prints the side lengths of a cube as well as its surface area of the cube.
 */
-public class Intro_Cube {
+public class Cube_Calculator {
 
 	public static void main(String[] args) {
 		// Task 1:Declare a side length as an int. 
