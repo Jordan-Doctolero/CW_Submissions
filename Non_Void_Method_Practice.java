@@ -113,7 +113,6 @@ public class Non_Void_Method_Practice {
 	  * This new non void methods passes the method as a double x and it prints the radius that I will 
 	  * call in the main method then calculates
 	  *	the diameter, circumference, and area of a circle that I declared each equation below.
-	  *	I also declared pi as a final so it can't be changed.
 	  */ 
 	
 	public static double calcDiameter(double radius)
@@ -141,8 +140,6 @@ public class Non_Void_Method_Practice {
 	/**
 	  * This new non void method method passes two ints and prints their sums I can 
 	  * declare in the main method.
-	  * It then will print the sum, difference, product, quotient, and modulus of the first and second.
-	  * It skips two lines after every operation.
 	  */ 
 	
 	public static int addNums(int x, int y)
