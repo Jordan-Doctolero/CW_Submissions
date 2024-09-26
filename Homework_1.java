@@ -12,11 +12,11 @@ public class Homework_1 {
 		/*
 		*This is my draft for my name in the code above.  
 		*OOOOO OOOOO   OOOO   OOOO
-		*  O   O    O O    O O    O
-		*  O   O    O O	   O O
-		*  O   O    O O	   O O
-		*O O   O    O O    O O    O
-		* O    OOOOO   OOOO   OOOO
+		*	O	O    O O    O O    O
+		*	O	O    O O	O O
+		*	O	O    O O	O O
+		*O	O	O    O O    O O    O
+		* O	OOOOO   OOOO   OOOO
 		* 
 		*/
 			
@@ -56,14 +56,15 @@ public class Homework_1 {
 		//Circumference of a circle is 2pi*r
 		//Area of a circle is pi*r^2
 			
-			double pi=3.1519;
+			final double pi=3.1519;
 			double rad=4.0;
-			double rad2=16.0;
+			double getCirc=2*pi*rad;
+			double getArea=pi*rad*rad;
 				
 			System.out.print("The circumference of the circle is ");
-			System.out.print(2*pi*rad);
+			System.out.print(getCirc);
 			System.out.print(" and the area of the circle is ");
-			System.out.print(pi*rad2);
+			System.out.print(getArea);
 			System.out.print(".");
 	}
 
