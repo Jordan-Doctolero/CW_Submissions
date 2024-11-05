@@ -17,7 +17,7 @@ import java.util.Scanner;
 //This imports a Scanner into my class.
 
 public class Worlde_Game {
-
+	
 	/**
 	 * This is where all the action happens.
 	 * The class calls all playGame method under the main and goes in order to do each code.
@@ -63,16 +63,7 @@ public class Worlde_Game {
 		//This skips a line to make it look neat.
 		
 		if(playerGuess.length()!=soln.length()
-		)
-		//This checks if the length of the word that the player guessed does not 
-		//equal the actual win condition word length.
-	     {
-			System.out.println("Please enter a 5 letter word that has no reapting letters!");
-			System.out.print("Disregard this following input and try again: ");
-	    	//If the conditions are met, the text above prints.
-	     }
-		
-		if(playerGuess.charAt(0)==playerGuess.charAt(1)
+		 ||(playerGuess.charAt(0)==playerGuess.charAt(1))
 		 ||(playerGuess.charAt(0)==playerGuess.charAt(2))
 		 ||(playerGuess.charAt(0)==playerGuess.charAt(3))
 		 ||(playerGuess.charAt(0)==playerGuess.charAt(4))
@@ -92,14 +83,16 @@ public class Worlde_Game {
 		 ||(playerGuess.charAt(4)==playerGuess.charAt(1))
 		 ||(playerGuess.charAt(4)==playerGuess.charAt(2))
 		 ||(playerGuess.charAt(4)==playerGuess.charAt(3))
-		)	
-		//This checks if there are any repeating characters in the players guess.
+		)
+		//This checks if the length of the word that the player guessed does not 
+		//equal the actual win condition word length.
+		//This also checks if there are any repeating characters in the players guess.
 		//In this case, we do not want any repeating characters.
-		{
+	     {
 			System.out.println("Please enter a 5 letter word that has no reapting letters!");
 			System.out.print("Disregard this following input and try again: ");
-			//If the conditions are met, the text above prints.
-		}
+	    	//If the conditions are met, the text above prints.
+	     }
 		
 		if(playerGuess.charAt(0)==soln.charAt(0))
 		//This checks if the the character at the index of the play guessed word
