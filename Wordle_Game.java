@@ -16,7 +16,7 @@
 import java.util.Scanner;
 //This imports a Scanner into my class.
 
-public class Worlde_Game {
+public class Wordle_Game {
 	
 	/*
 	 * This is where all the action happens.
