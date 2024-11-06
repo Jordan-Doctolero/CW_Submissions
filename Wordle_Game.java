@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 public class Worlde_Game {
 	
-	/**
+	/*
 	 * This is where all the action happens.
 	 * The class calls all playGame method under the main and goes in order to do each code.
 	 * You will be able to input a word into a Scanner.
@@ -38,7 +38,7 @@ public class Worlde_Game {
 		
 	}
 	
-	/**
+	/*
 	 * This method is passed a string soln.
 	 * This soln word is passed above in the main which is declared a String variable for the actual game word.
 	 * It uses a scanner object to take the player guess and find if the letters are in the right spot,
@@ -52,7 +52,7 @@ public class Worlde_Game {
 		//This instatiates a new Scanner object into my class. 
 		//Basically this will make the scanner work and the user can type inside the console.
 		
-		System.out.println("Make a 5 letter word guess: ");
+		System.out.println("Make a 5 letter word guess that has no repeating letters: ");
 		//This will print out the above text so the knows what to do.
 		
 		String playerGuess = new String (gameReader.next());
