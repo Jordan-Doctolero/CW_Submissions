@@ -1,4 +1,5 @@
 /*
+ * This locates the month taht you want to find with a number you pass.
  * This methods finds the month at the index of the String that is passed as the parameter n.
  * It uses logic statements and loops to find the month from a single string containing all the tweleve months in a year.
 */
@@ -37,6 +38,6 @@ public static String getMonth(int n)
 		}
 	}
 		
-    //If the index number you type isn't allowed or in the boundaries, then this prints.
+//If the index number you type isn't allowed or in the boundaries, then this prints.
 return " /* What String would you put here? */ ";	
 	}
