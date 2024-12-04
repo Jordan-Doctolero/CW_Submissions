@@ -9,7 +9,7 @@ public static String getMonth(int n)
 			+ "July August September October November December ";
 
     		//The i starts at 1 and continues while i is less than or equal to 12. 
-    		//i represents the current month of the loop that is being traced.
+    		//i represents the current index month of the loop that is being traced.
    		//After it loops, it then iterates.
 		for (int i = 1; i <= 12; i++)
 	{
