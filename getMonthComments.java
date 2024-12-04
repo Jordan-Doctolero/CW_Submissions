@@ -39,5 +39,5 @@ public static String getMonth(int n)
 	}
 		
 //If the index number you type isn't allowed or in the boundaries, then this prints.
-return " /* What String would you put here? */ ";	
+return "PASS A VALUE THAT IS APPLICABLE TO OUR REAL WORLD GREGORIAN MONTH CALENDAR!!!";
 	}
