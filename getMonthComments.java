@@ -1,5 +1,5 @@
 /*
- * This locates the month taht you want to find with a number you pass.
+ * This locates the month that you want to find with a number you pass.
  * This methods finds the month at the index of the String that is passed as the parameter n.
  * It uses logic statements and loops to find the month from a single string containing all the tweleve months in a year.
 */
