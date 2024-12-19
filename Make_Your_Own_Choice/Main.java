@@ -22,9 +22,8 @@ public class Main {
 	 * Certain paths will deviate but tie back in.
 	 * Certain paths will be completely different.
 	 */
-	public static void main(String[] args) {
-		
-		
+	public static void main(String[] args) 
+	{
 		//Part 1 of Ep 1:
 		Characters name=theNameSelection();	
 		System.out.print(name);
@@ -193,7 +192,6 @@ public class Main {
 		
 		}
 		
-		
 		boolean validHeight=true;
 		//This declares a boolean variable and sets it equal to true.
 		//validHeight because they are choosing a height.
@@ -231,8 +229,6 @@ public class Main {
 		}
 		return yourPlayer;
 		}
-	
-	
 	
 	/*
 	 * This method is before the game starts.
@@ -342,7 +338,6 @@ public class Main {
 		
 		return "Try Again";
 		//If nothing is able to run, this is returned.
-		
 	}
 	
 	/*
@@ -917,8 +912,9 @@ public class Main {
 						System.out.println("What happened next is unbelievable and is shocking...");
 						//Explains what you do and feel.
 						//It explains and shows what happens.
-				
 						isValids=false;
+						//This sets the boolean to false to exit the loop.
+						start=false;
 						//This sets the boolean to false to exit the loop.
 					}
 					
@@ -930,9 +926,7 @@ public class Main {
 					}
 				
 				}
-					
-					
-					
+							
 				}
 				
 				else
@@ -945,10 +939,7 @@ public class Main {
 				}
 				start=false;
 				//This sets the boolean to false to exit the loop.
-			}
-			
-			
-		
+			}	
 	}
 	
 		if(gameInput.equalsIgnoreCase("Yes")) 
@@ -1010,11 +1001,10 @@ public class Main {
 					}
 				}
 			}
-			
 		}
 		
 		if(gameInput.equalsIgnoreCase("Yes"))
-	    //If the user Inputs Yes, this will start to run.
+	    	//If the user Inputs Yes, this will start to run.
 		{
 			 if(name.getName().equals("Mikasa Ackerman"))
 			 //If the players name is equal to Mikasa Ackerman, this will continue to run.
@@ -1047,7 +1037,7 @@ public class Main {
 				//This skips a line to make it look neater.
 			}
 		}
-		else
+			else
 			//If the if statements do not run, this runs.
 			//Basically if the user inputs "No", this runs.
 			{
