@@ -865,9 +865,9 @@ public class Main {
 								}
 							}
 						
-             /*
-              * This is a work in progress option.
-              */
+             					       /*
+            						* This is a work in progress option.
+              						*/
 							else if(gameInputer.equalsIgnoreCase("B"))
 							//If A is false, this checks, if B is true, this prints.
 							{
@@ -898,9 +898,9 @@ public class Main {
 						}
 					}
 
-        /*
-          * This is a work in progress option.
-          */
+        			       /*
+        		   		* This is a work in progress option.
+         				*/
 					else if(gameInputss.equalsIgnoreCase("B"))
 					//If the user does not pick A, this checks to see if they pick B, if they did, this runs.
 					{
