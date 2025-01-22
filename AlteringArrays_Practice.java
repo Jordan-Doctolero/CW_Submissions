@@ -6,14 +6,14 @@
  */
 public class AlteringArrays_Practice {
 	
-  /*
+  	/*
 	 * This is the main method.
 	 * I will be calling and declaring everything I need to here.
 	 */
 	public static void main(String[] args) {
 		
-		int[] nums = {4,8,7,10};
-		//This decalres an int array and sets it equal to 3 elements.
+	int[] nums = {4,8,7,10};
+	//This decalres an int array and sets it equal to 3 elements.
         int[] result = subtract5FromAll4(nums);
         //This decalres an int array that is the result that is set equal to the method down below that is passed the nums array.
         System.out.println(result[0]);
