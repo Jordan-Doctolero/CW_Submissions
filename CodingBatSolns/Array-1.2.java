@@ -4,35 +4,36 @@ public int[] rotateLeft3(int[] nums)
   int[]copyArr=new int[nums.length];
   boolean array=true;
   while(array)
-		{
-			copyArr[0] = nums[1];
+{
+      copyArr[0] = nums[1];
       copyArr[1] = nums[2];
       copyArr[2] = nums[0];
-			array=false;
-		}
-		return copyArr;
+      array=false;
+}
+	return copyArr;
 }
 
 //reverse3
 public int[] reverse3(int[] nums) {
-  int[]copyArr=new int[nums.length];
-  boolean array=true;
-  while(array)
-		{
-			copyArr[0] = nums[2];
-      copyArr[1] = nums[1];
-      copyArr[2] = nums[0];
-			array=false;
-		}
-		return copyArr;
+int[]copyArr=new int[nums.length];
+boolean array=true;
+
+while(array)
+{
+copyArr[0] = nums[2];
+copyArr[1] = nums[1];
+copyArr[2] = nums[0];
+array=false;
+}
+	return copyArr;
 }
 
 //maxEnd3
 public int[] maxEnd3(int[] nums) {
-  int[]copyArr=new int[nums.length];
-  if(nums[0]>nums[2])
+int[]copyArr=new int[nums.length];
+if(nums[0]>nums[2])
   {
-    	copyArr[0] = nums[0];
+      copyArr[0] = nums[0];
       copyArr[1] = nums[0];
       copyArr[2] = nums[0];
   }
