@@ -77,8 +77,8 @@ public int sum2(int[] nums) {
 
 //middleWay
 public int[] middleWay(int[] a, int[] b) {
-  int[] new ={a[1], b[1]};
-  return new;
+  int[] mid ={a[1], b[1]};
+  return mid;
 }
 
 //makeEnds
