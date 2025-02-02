@@ -65,26 +65,25 @@ public int[] fix23(int[] nums) {
 
 //start1
 public int start1(int[] a, int[] b) {
-      int count=0;
-		  for(int i=0;i<1;i++)
-		  {
-		     if(a.length > 0 && a[0] == 1)
-		     {
-		        count++;
-		     }
-		  }
+ 	int count=0;
+	for(int i=0;i<1;i++)
+	{
+	  if(a.length > 0 && a[0] == 1)
+	  {
+		  count++;
+	  }
+	}
 		  
-		  int core=count;
+	int core=count;
 		  
-		  for(int i=0;i<1;i++)
-		  {
-		    if(b.length > 0 && b[0] == 1)
-		     {
-		        core++;
-		     }
-		  }
-		  
-		  return core;
+	for(int i=0;i<1;i++)
+	{
+		if(b.length > 0 && b[0] == 1)
+		{
+		  core++;
+		}
+	}
+	return core;
 }
 
 //biggerTwo
