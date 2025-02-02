@@ -95,3 +95,15 @@ public int[] biggerTwo(int[] a, int[] b) {
   
   return a;
 }
+
+//makeMiddle
+public int[] makeMiddle(int[] nums) {
+  int[] middle={nums[nums.length / 2 - 1], nums[nums.length / 2]};
+  return middle;
+}
+
+//plusTwo
+public int[] plusTwo(int[] a, int[] b) {
+  int[] twoArr={a[0], a[1], b[0], b[1]};
+  return twoArr;
+}
