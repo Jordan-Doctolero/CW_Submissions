@@ -115,3 +115,52 @@ public int[] swapEnds(int[] nums) {
   nums[nums.length-1]=temp;
   return nums;
 }
+
+//midThree
+public int[] midThree(int[] nums) {
+  int[] middle = new int[3];
+  middle[0] = nums[nums.length / 2 - 1];
+  middle[1] = nums[nums.length / 2];
+  middle[2] = nums[nums.length / 2 + 1];
+  return middle;
+}
+
+//maxTriple
+public int maxTriple(int[] nums) {
+   int tripArr=nums[0];
+   if(tripArr<nums[nums.length/2])
+   {
+    tripArr=nums[nums.length/2];
+   }
+              
+   if(tripArr<nums[nums.length-1])
+   {
+    tripArr=nums[nums.length-1];
+   }
+    return tripArr;
+}
+
+//frontPiece
+public int[] frontPiece(int[] nums) {
+   int[] pieceArr;
+    if(nums.length<2)
+    {
+      pieceArr=new int[nums.length];
+    }
+    
+    else
+    {
+      pieceArr=new int[2];
+    }
+                  
+    if(nums.length>0)
+    {
+      pieceArr[0]=nums[0];
+    }
+                            
+    if(nums.length > 1)
+    {
+      pieceArr[1]=nums[1];
+    }
+    return pieceArr;
+}
