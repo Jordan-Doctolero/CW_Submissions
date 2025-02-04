@@ -164,3 +164,63 @@ public int[] frontPiece(int[] nums) {
     }
     return pieceArr;
 }
+
+//unlucky1
+public boolean unlucky1(int[] nums) {
+ if (nums.length>2 && nums[0]==1 && nums[1]==3) 
+ {
+    return true;
+ }
+ 
+ if (nums.length>2 && nums[1]==1 && nums[2]==3) 
+ {
+   return true;
+ }
+
+ if (nums.length>2 && nums[nums.length-2]==1 && nums[nums.length-1]==3) 
+ {
+   return true;
+ }
+ 
+ if (nums.length==2 && nums[0]==1 && nums[1]==3) 
+ {
+   return true;
+ }
+   
+   return false;
+}
+
+//make2
+public int[] make2(int[] a, int[] b) {
+  if (a.length >= 2) 
+  {
+    return new int[]{a[0], a[1]};
+  }
+  
+  if (a.length == 1) 
+  {
+    return new int[]{a[0], b[0]};
+  }
+    return new int[]{b[0], b[1]};
+
+}
+
+//front11
+public int[] front11(int[] a, int[] b) {
+  if(a.length>0 && b.length>0) 
+  {
+    return new int[] {a[0], b[0]};
+  } 
+  
+  else if(a.length>0) 
+  {
+    return new int[] {a[0]};
+  } 
+  
+  else if(b.length>0) 
+  {
+    return new int[] {b[0]};
+  }
+                    
+    return new int[0];
+}
