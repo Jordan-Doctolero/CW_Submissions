@@ -140,12 +140,12 @@ public class Algorithms_Project {
  		//This calls the method and passes it an int array.
  		System.out.println();
  		//This skips a line to make it look neater.
-        int[] arrs={24,-53,1,0,4,100,99};
-        //This declares a new int array.
-        insertionSort(arrs);
-        //This calls the method and passes it an int array.
-        System.out.println();
-        //This skips a line to make it look neater.
+        	int[] arrs={24,-53,1,0,4,100,99};
+        	//This declares a new int array.
+        	insertionSort(arrs);
+        	//This calls the method and passes it an int array.
+        	System.out.println();
+        	//This skips a line to make it look neater.
 	}
 	
 	/*
@@ -153,11 +153,11 @@ public class Algorithms_Project {
 	 */
 	public static int smallestNum(int[] nums)
 	{
-		int temp=nums[0];
-		//This declares a temp int set equal to the nums array at the index 0.
-		for(int i=0;i<nums.length;i++) 
-		//It goes through the array as long as the traverser is less than the array length.
-		{
+	int temp=nums[0];
+	//This declares a temp int set equal to the nums array at the index 0.
+	for(int i=0;i<nums.length;i++) 
+	//It goes through the array as long as the traverser is less than the array length.
+	{
             if(nums[i]<temp) 
             //This runs if the number at index is less than the temp int.
             {
@@ -174,11 +174,11 @@ public class Algorithms_Project {
 	 */
 	public static int smallestIndex(int[] nums)
 	{
-		int smallestIndex=0;
-		//This declares an int set equal to 0.
-	    for(int i=0;i<nums.length;i++)
-	    //It goes through the array as long as the traverser is less than the array length.
-	    {
+	     int smallestIndex=0;
+	     //This declares an int set equal to 0.
+	     for(int i=0;i<nums.length;i++)
+	     //It goes through the array as long as the traverser is less than the array length.
+	     {
 	    	if(nums[i]<nums[smallestIndex]) 
 	    	//This will run if the number at the index is less than the number at the int variable.
 	    	{
@@ -195,11 +195,11 @@ public class Algorithms_Project {
 	 */
 	public static int theAverage(int[] nums)
 	{
-		int theAverage=0;
-		//This declares an int set equal to 0.
-		for(int i=0;i<nums.length;i++)
-		//It goes through the array as long as the traverser is less than the array length.
-		{
+	     int theAverage=0;
+	     //This declares an int set equal to 0.
+	     for(int i=0;i<nums.length;i++)
+	     //It goes through the array as long as the traverser is less than the array length.
+	       {
 			theAverage+=nums[i];
 			//This adds the int vairable while setting it equal to the num at the index.
 		}
@@ -254,7 +254,7 @@ public class Algorithms_Project {
 		 }
 		 for(int i=0;i<copyArr.length;i++) 
 		 //It goes through the array as long as the traverser is less than the array length.	 
-	     {
+	     	 {
 			 if(nums[i]==5 && nums[i+1]==5) 
 			 //This runs if the number at the index is equal to 5 and the number at the index+1 is equal to 5.
 			 {
@@ -262,9 +262,9 @@ public class Algorithms_Project {
 				 //Sets the first number at index equal to 0.
 				 copyArr[i+1]=0;
 				 //Sets the number at index+1 equal to 0.		 
-	         }
+	         	 }
 
-	    }
+	    	 }
 		 for (int num : copyArr) 
 		 //This for each loop goes through the first array and prints each element.
 		 {
@@ -280,14 +280,14 @@ public class Algorithms_Project {
 	 {
 		 for(int i=0;i<nums.length;i++) 
 		 //It goes through the array as long as the traverser is less than the array length.
-	     {
-			 if(nums[i]==number && nums[i+1]==number && nums[i+2]==number) 
-			 //If the number at index, index+1, and index+2 are equal to the number passed, this runs.
+	     	 {
+			if(nums[i]==number && nums[i+1]==number && nums[i+2]==number) 
+			//If the number at index, index+1, and index+2 are equal to the number passed, this runs.
 			 {
 				return true;
 				//Return true;
-	         }
-	    }
+	         	 }
+	    	}
 		return false;
 		//Else returns false.
 	}
@@ -299,17 +299,17 @@ public class Algorithms_Project {
 	 */
 	 public static int intSearcher(int[] nums, int number)
 	 {
-		 int counter=0;
-		 //This declares an int set equal to 0.
-		 for(int i=0;i<nums.length;i++) 
-		 //It goes through the array as long as the traverser is less than the array length.
+	     int counter=0;
+	     //This declares an int set equal to 0.
+	     for(int i=0;i<nums.length;i++) 
+	     //It goes through the array as long as the traverser is less than the array length.
 	     {
-			 if(nums[i]==number) 
-			 //If the number at index is equal to the number passed, this runs. 
-			 {
-				counter++;
-				//Adds one to the counter.
-	         }	 
+	     	if(nums[i]==number) 
+	        //If the number at index is equal to the number passed, this runs. 
+		{
+			counter++;
+			//Adds one to the counter.
+	        }	 
 	    }
 		return counter;
 		//Returns counter which is how many times a number appears.
@@ -355,9 +355,9 @@ public class Algorithms_Project {
 		 for(int i=copyArr.length-1;i>0;i--) 
 		 //It goes through the array as long as the traverser is greater than 0.
 		 {
-			 copyArr[i]=nums[i-1];
-			 //This sets the copy Array at the index equal to the element of nums at the traverser-1.
-	     }
+			copyArr[i]=nums[i-1];
+			//This sets the copy Array at the index equal to the element of nums at the traverser-1.
+	     	 }
 		 
 		 copyArr[0]=lastElement;
 		 //This sets the first element of the copy Array equal to the last element.
@@ -379,15 +379,15 @@ public class Algorithms_Project {
 		 for(int i=1; i<nums.length;i++) 
 	     //It goes through the array as long as the traverser is greater than 0.
 	     {
-			 int insert=nums[i];
-			 //This int is set equal to the array at the index which we will be inserting.
+		 int insert=nums[i];
+		 //This int is set equal to the array at the index which we will be inserting.
 	         int j=i-1;
 	         //This int is set equal to the traverser-1 which will be the number before the one we are checking/inserting.
 	         while(j >= 0 && nums[j]>insert) 
 	         //While j is greater or equal to 0 and the number of the array at the index of j is greater than the number we are inserting, this will run.
 	         {
-	        	 nums[j+1]=nums[j];
-	        	 //Sets the number at index+1 equal to the number at index j.
+	             nums[j+1]=nums[j];
+	             //Sets the number at index+1 equal to the number at index j.
 	             j--;
 	             //Subtracts 1 from j to either keep checking or exit the loop.
 	         }
