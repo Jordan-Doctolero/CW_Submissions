@@ -376,14 +376,14 @@ public class Algorithms_Project {
 	  */
 	 public static void insertionSort(int[] nums) 
 	 {
-		 for(int i=1; i<nums.length;i++) 
+	     for(int i=1; i<nums.length;i++) 
 	     //It goes through the array as long as the traverser is greater than 0.
 	     {
 		 int insert=nums[i];
 		 //This int is set equal to the array at the index which we will be inserting.
 	         int j=i-1;
 	         //This int is set equal to the traverser-1 which will be the number before the one we are checking/inserting.
-	         while(j >= 0 && nums[j]>insert) 
+	         while(j>= 0 && nums[j]>insert) 
 	         //While j is greater or equal to 0 and the number of the array at the index of j is greater than the number we are inserting, this will run.
 	         {
 	             nums[j+1]=nums[j];
@@ -392,7 +392,7 @@ public class Algorithms_Project {
 	             //Subtracts 1 from j to either keep checking or exit the loop.
 	         }
 	         
-	        nums[j + 1] = insert;
+	        nums[j+1]=insert;
 	        //This set the number at index+1(The number after the number we are checking) equal to the number we are inserting/sorting.
 	        }
 	        
