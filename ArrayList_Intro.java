@@ -60,8 +60,8 @@ public class Array_List_Intro {
 		System.out.println();
 		//This skips a line so it looks neater.
 		
-	    //Task 4: Add 5 to your intArrList so that its values are now {1, 2, 5, 3}. 
-	    //Then add "Derek" to your stringArrList so its values are {"Alice" , "Derek" , "Bob" , "Charlie"}
+	    	//Task 4: Add 5 to your intArrList so that its values are now {1, 2, 5, 3}. 
+	    	//Then add "Derek" to your stringArrList so its values are {"Alice" , "Derek" , "Bob" , "Charlie"}
 		intArrList.add(2, 5);
 		//This adds the number int 5 to the 2nd index.
 		System.out.println(intArrList);
