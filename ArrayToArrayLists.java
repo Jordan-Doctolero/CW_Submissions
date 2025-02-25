@@ -135,18 +135,19 @@ public class ArrayToArrayLists {
 	 */
 	public static int checkFor4(ArrayList<Integer> nums)
 	{
-		for (int i=0;i<nums.size();i++) 
-		//While the traverser is less than the size of the ArrayList, this runs.
-		{
-            if (nums.get(i)==4) 
-            //If the number at the index using .get is equal to 4, this runs.
-            {
-                return i; 
-                //This returns the index of the first 4.
-            }
+	     for (int i=0;i<nums.size();i++) 
+	     //While the traverser is less than the size of the ArrayList, this runs.
+	     {
+        	if (nums.get(i)==4) 
+        	//If the number at the index using .get is equal to 4, this runs.
+             	{
+                     return i; 
+                     //This returns the index of the first 4.
+            	}
         }
-        return -1; 
-        //Else it returns -1.
+        	return -1; 
+       		//Else it returns -1.
+	
 	}
 	
 	/*
@@ -156,17 +157,16 @@ public class ArrayToArrayLists {
 	 */
 	public static void ridAllFives(ArrayList<Integer> nums)
 	{
-		for (int i=0;i<nums.size();i++) 
-		//While the traverser is less than the size of the ArrayList, this runs.
-		{
-            if (nums.get(i)==5) 
-            //If the number at the index using .get is equal to 5, this runs.
-            {
-            	nums.remove(i);
-            	//This removes the number at the index of i using .remove.
-            }
-        }
-        
+	     for (int i=0;i<nums.size();i++) 
+	     //While the traverser is less than the size of the ArrayList, this runs.
+	     {
+             	if (nums.get(i)==5) 
+           	//If the number at the index using .get is equal to 5, this runs.
+            	{
+            	     nums.remove(i);
+            	     //This removes the number at the index of i using .remove.
+            	}
+             }
 	}
 	
 	/*
@@ -189,14 +189,14 @@ public class ArrayToArrayLists {
 				if(nums.get(i)>nums.get(i+1))
 				//If the num that gets from the ArrayList at the index is greater than the num that gets from the ArrayList at the index+1, this will run.
 				{
-					temp=nums.get(i);
-					//This sets our temp variable equal to the number at the index by using .get.
-					nums.set(i, nums.get(i + 1));
-					//This sets the number at that index to the number at the next position or index+1 using .get.
-					nums.set(i+1, temp);
-					//This sets the number at the next position or index+1 equal to what we set the temp equal to in the first part.
-					counter++;
-				    //This adds 1 to the counter.
+				     temp=nums.get(i);
+				     //This sets our temp variable equal to the number at the index by using .get.
+				     nums.set(i, nums.get(i + 1));
+				     //This sets the number at that index to the number at the next position or index+1 using .get.
+				     nums.set(i+1, temp);
+				     //This sets the number at the next position or index+1 equal to what we set the temp equal to in the first part.
+				     counter++;
+				     //This adds 1 to the counter.
 				}
 			}	
 		}
