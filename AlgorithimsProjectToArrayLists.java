@@ -372,15 +372,15 @@ public class AlgorithimsProjectToArrayLists {
 		for(int i=0;i<nums.size();i++) 
 		//It goes through the array as long as the traverser is less than the array size.
 		{
-            if(nums.get(i)<temp) 
-            //This runs if the number at index using .get is less than the temp int.
-            {
+            		if(nums.get(i)<temp) 
+            		//This runs if the number at index using .get is less than the temp int.
+            	{
             	temp=nums.get(i);
             	//This sets the temp int equal to the number at index of the arraylist using .get.
             }
         }
-        return temp;
-        //This returns temp which is now the smallest number in the array.
+        	return temp;
+        	//This returns temp which is now the smallest number in the array.
 	}
 	
 	/*
@@ -388,8 +388,8 @@ public class AlgorithimsProjectToArrayLists {
 	 */
 	public static int smallestIndex(ArrayList<Integer> nums)
 	{
-		int smallestIndex=0;
-		//This declares an int variable set equal to 0.
+	    int smallestIndex=0;
+	    //This declares an int variable set equal to 0.
 	    for(int i=0;i<nums.size();i++)
 	    //It goes through the array as long as the traverser is less than the array size.
 	    {
@@ -456,17 +456,17 @@ public class AlgorithimsProjectToArrayLists {
 	 */
 	 public static void replaceConsecutiveFives(ArrayList<Integer> nums) 
 	 {	 
-		 for(int i=0;i<nums.size();i++) 
-		 //It goes through the array as long as the traverser is less than the array size.	 
+	     for(int i=0;i<nums.size();i++) 
+	     //It goes through the array as long as the traverser is less than the array size.	 
 	     {
-			 if(nums.get(i)==5 && nums.get(i+1)==5) 
-			 //This runs if the number at the index using .get is equal to 5 and the number at the index+1 using .get is equal to 5.
-			 {
-				 nums.set(i,0);
-				 //This uses .set to set the number at the index to 0.
-				 nums.set(i+1,0);
-				 //This uses .set to set the number at the index+1 to 0.
-	         }
+	     	if(nums.get(i)==5 && nums.get(i+1)==5) 
+		//This runs if the number at the index using .get is equal to 5 and the number at the index+1 using .get is equal to 5.
+		{
+			nums.set(i,0);
+			//This uses .set to set the number at the index to 0.
+			nums.set(i+1,0);
+			//This uses .set to set the number at the index+1 to 0.
+	        }
 
 	    }
 	}
@@ -478,14 +478,14 @@ public class AlgorithimsProjectToArrayLists {
 	 {
 		 for(int i=0;i<nums.size();i++) 
 		 //It goes through the array as long as the traverser is less than the array size.
-	     {
+	     	 {
 			 if(nums.get(i)==number && nums.get(i+1)==number && nums.get(i+2)==number) 
 			 //If the number at index, index+1, and index+2 are equal to the number passed-all using .get-this runs.
 			 {
 				return true;
 				//Return true;
 	         }
-	    }
+	    		 }
 		return false;
 		//Else returns false.
 	}
@@ -556,11 +556,11 @@ public class AlgorithimsProjectToArrayLists {
 	  */
 	 public static void insertionSort(ArrayList<Integer> nums) 
 	 {
-		 for(int i=1;i<nums.size();i++) 
+	     for(int i=1;i<nums.size();i++) 
 	     //It goes through the array as long as the traverser is less than the array size.
 	     {
-			 int insert=nums.get(i);
-			 //This int is set equal to the array at the index using .get which we will be inserting.
+		 int insert=nums.get(i);
+		 //This int is set equal to the array at the index using .get which we will be inserting.
 	         int j=i-1;
 	         //This int is set equal to the traverser-1 which will be the number before the one we are checking/inserting.
 	         while(j>=0 && nums.get(j)>insert) 
