@@ -62,6 +62,12 @@ public class ArrayToArrayLists {
 		//This adds an element to the ArrayList.
 		intArrLister.add(5);
 		//This adds an element to the ArrayList.
+		intArrLister.add(3);
+		//This adds an element to the ArrayList.
+		intArrLister.add(5);
+		//This adds an element to the ArrayList.
+		intArrLister.add(1);
+		//This adds an element to the ArrayList.
 		ridAllFives(intArrLister);
 		//This calls the method and is passed an ArrayList.
 		System.out.println(intArrLister);
@@ -165,6 +171,8 @@ public class ArrayToArrayLists {
             	{
             	     nums.remove(i);
             	     //This removes the number at the index of i using .remove.
+		     i--;
+            	     //This makes sure any elements when this runs will not be skipped.
             	}
              }
 	}
