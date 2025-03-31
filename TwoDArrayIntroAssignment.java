@@ -462,17 +462,17 @@ public class TwoDArrayIntroAssignment {
 	
 	public static void rowMajorOrder(int[][] nums)
 	{
-		for (int i=0;i<nums.length;i++) 
+		for (int i=0;i<=nums.length-1;i++) 
 		//This goes through the whole array looping for rows.
 		//Traverses through the columns.
 		{ 
-			for (int j=0;j<nums[i].length;j++) 
+			for (int j=0;j<=nums[0].length-1;j++) 
 			//This goes through the whole array looping for columuns.
 			//Traverses through the rows.
 			{ 
-	            		System.out.print(nums[i][j]+" ");
-	           	 	//This prints out the element at the index i for row element and the index j for column element.
-	        	}
+	            System.out.print(nums[i][j]+" ");
+	            //This prints out the element at the index i for row element and the index j for column element.
+	        }
 		}
 	}
 	
@@ -483,17 +483,17 @@ public class TwoDArrayIntroAssignment {
 	
 	public static void columnMajorOrder(int[][] nums)
 	{
-		for (int j=0;j<nums[0].length;j++) 
+		for(int j=0;j<=nums[0].length-1;j++) 
 		//This goes through the whole array looping for columns.
-		//Traverses through the rows.
+		//Traverses through the columns.
 		{
-	        	for (int i=0;i<nums.length;i++) 
-	        	//This goes through the whole array looping for rows.
-			//Traverses through the columns.
-	        	{ 
-	           	 System.out.print(nums[i][j]+" ");
-	            	//This prints out the element at the index i for column element and the index j for row element.
-	        	}
+	        for(int i=0;i<=nums.length-1;i++) 
+	        //This goes through the whole array looping for rows.
+	        //Traverses through the rows.
+	        { 
+	            System.out.print(nums[i][j]+" ");
+	            //This prints out the element at the index i for column element and the index j for row element.
+	        }
 	    }
 	}
 }
