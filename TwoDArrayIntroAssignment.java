@@ -472,7 +472,7 @@ public class TwoDArrayIntroAssignment {
 			{ 
 	            System.out.print(nums[i][j]+" ");
 	            //This prints out the element at the index i for row element and the index j for column element.
-	        }
+	        	}
 		}
 	}
 	
