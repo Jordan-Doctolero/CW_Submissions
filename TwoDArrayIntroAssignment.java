@@ -29,14 +29,14 @@ public class TwoDArrayIntroAssignment {
 		
 		int[][] twoDArray= 
 		{
-				{4,5,7},
-				{2,-1,8},
-				{0,1,3}
+			{4,5,7},
+			{2,-1,8},
+			{0,1,3}
 		};
 		//This declares a 2D array with 3 rows and 3 columns. 
 		//Each row have their own values.
 		
-	   /* For the following problems, print out those elements before and
+	 	/* For the following problems, print out those elements before and
 		* after to verify it worked. 
 		*/
 		
@@ -51,8 +51,8 @@ public class TwoDArrayIntroAssignment {
 		for(int i=0;i<gridNums[0].length;i++)
 		//This goes through the first row of the 2d array.
 		{	
-				System.out.print(gridNums[0][i]+ " ");
-				//This prints out the number of the array at the index i and its always the first row.
+			System.out.print(gridNums[0][i]+ " ");
+			//This prints out the number of the array at the index i and its always the first row.
 		}
 		System.out.println(" }");
 		//This prints out the text.
@@ -187,8 +187,8 @@ public class TwoDArrayIntroAssignment {
 		for(int i=0;i<twoDArray[0].length;i++)
 		//This goes through the first row of the 2d array.
 		{	
-				System.out.print(twoDArray[0][i]+ " ");
-				//This prints out the number of the array at the index i and its always the first row.
+			System.out.print(twoDArray[0][i]+ " ");
+			//This prints out the number of the array at the index i and its always the first row.
 		}
 		System.out.println(" }");	
 		//This prints out the text.
@@ -266,7 +266,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<gridNums[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	   	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(gridNums[gridNums.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -279,7 +279,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<twoDArray[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	   	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(twoDArray[twoDArray.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -300,7 +300,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<gridNums[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	   	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(gridNums[gridNums.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -313,7 +313,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<twoDArray[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	    	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(twoDArray[twoDArray.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -331,7 +331,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<gridNums[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	    	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(gridNums[gridNums.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -344,7 +344,7 @@ public class TwoDArrayIntroAssignment {
 		
 		for(int i=0;i<twoDArray[0].length;i++)
 		//This goes through the row of the 2d array.
-	    //I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
+	   	//I used the first row because the 2d array is a rectangle so the rows and columns are equal in length.
 		{	
 			System.out.print(twoDArray[twoDArray.length-1][i]+ " ");
 			//This prints out the number of the array at the index i and its always the last row.
@@ -395,7 +395,7 @@ public class TwoDArrayIntroAssignment {
 		int[][] myArray = 
 		//This calls the method from below and is passed a 2d array.
 			{
-				{1, 2, 3},
+			    {1, 2, 3},
 			    {4, 5, 6},
 			    {7, 8, 9}
 		 	};
@@ -468,9 +468,9 @@ public class TwoDArrayIntroAssignment {
 			for (int j=0;j<nums[i].length;j++) 
 			//This goes through the whole array looping for columuns.
 			{ 
-	            System.out.print(nums[i][j]+" ");
-	            //This prints out the element at the index i for row element and the index j for column element.
-	        }
+	            		System.out.print(nums[i][j]+" ");
+	           	 	//This prints out the element at the index i for row element and the index j for column element.
+	        	}
 		}
 	}
 	
@@ -484,12 +484,12 @@ public class TwoDArrayIntroAssignment {
 		for (int j=0;j<nums[0].length;j++) 
 		//This goes through the whole array looping for columns.
 		{
-	        for (int i=0;i<nums.length;i++) 
-	        //This goes through the whole array looping for rows.
-	        { 
-	            System.out.print(nums[i][j]+" ");
-	            //This prints out the element at the index i for column element and the index j for row element.
-	        }
+	        	for (int i=0;i<nums.length;i++) 
+	        	//This goes through the whole array looping for rows.
+	        	{ 
+	           	 System.out.print(nums[i][j]+" ");
+	            	//This prints out the element at the index i for column element and the index j for row element.
+	        	}
 	    }
 	}
 }
