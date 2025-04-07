@@ -107,7 +107,7 @@ public class TicTacToeGame {
 			//This declares a new Scanner to use.
 					
 			if(gameInput.equalsIgnoreCase("X") || gameInput.equalsIgnoreCase("O")
-		      ||gameInput.equalsIgnoreCase("Mario") || gameInput.equalsIgnoreCase("Luigi"))
+		      	||gameInput.equalsIgnoreCase("Mario") || gameInput.equalsIgnoreCase("Luigi"))
 			//If the user inputs any of these, this will run.
 			{
 				System.out.println(" ");
@@ -136,8 +136,8 @@ public class TicTacToeGame {
 	 */
 	public static void chooseFirstPlayer() 
 	{
-		int randomPlayer=(int)(Math.random()*2)+1;
-		//This chooses a random number of 1 or 2 to choose the random Player.
+	    int randomPlayer=(int)(Math.random()*2)+1;
+	    //This chooses a random number of 1 or 2 to choose the random Player.
 	    if(randomPlayer==1) 
 	    //If the numebr from Math.random is equal to 1, this runs.
 	    {
@@ -169,8 +169,8 @@ public class TicTacToeGame {
 	 */
 	public static void playerMove() 
 	{
-		int row=-1;
-		//This declares an int that is for the rows.
+	    int row=-1;
+	    //This declares an int that is for the rows.
 	    int col=-1;
 	    //This declares an int that is for the columns.
 	    boolean valid=false;
@@ -299,8 +299,8 @@ public class TicTacToeGame {
 		if(player=="X") 
 		//If the coditons are met, this runs.
 		{
-			System.out.println("It's Luigi's (O) turn!");
-			//This prints out the text and skips a line.
+		    System.out.println("It's Luigi's (O) turn!");
+		    //This prints out the text and skips a line.
 		    player="O";
 		    //This sets the player object to O.
 		    playerName="Luigi";
@@ -310,12 +310,12 @@ public class TicTacToeGame {
 	    else 
 	    //In any other case, this runs.
 	    {
-	    	System.out.println("It's Mario's (X) turn!");
+	        System.out.println("It's Mario's (X) turn!");
 	    	//This prints out the text and skips a line.
-		    player="X";
-		    //This sets the player object to X.
-		    playerName="Mario";
-		    //This sets the playerName object to Mario.
+		player="X";
+		//This sets the player object to X.
+		playerName="Mario";
+	        //This sets the playerName object to Mario.
 		}
 	}
 	
@@ -380,20 +380,20 @@ public class TicTacToeGame {
 		//This goes through the whole array looping for rows.
 		//Traverses through the columns.
 		{ 
-			for (int j=0;j<=game[i].length-1;j++) 
-			//This goes through the whole array looping for columuns.
+		    for (int j=0;j<=game[i].length-1;j++) 
+		    //This goes through the whole array looping for columuns.
 		    //Traverses through the rows.
-			{ 
-				if(gameArray[i][j]=="*") 
-				//If the Array at i and j are equal to *, this runs.
+		    { 
+		        if(gameArray[i][j]=="*") 
+			//If the Array at i and j are equal to *, this runs.
 	            {
-					return false;
-					//Returns false, meaning there is no space, meaning its a tie.
+		        return false;
+			//Returns false, meaning there is no space, meaning its a tie.
 	            }
 	        }
 	    }
-			return true;
-			//Else it returns true, meaning not a tie.
+		    return true;
+		    //Else it returns true, meaning not a tie.
 	}
 	
 	/*
@@ -401,19 +401,19 @@ public class TicTacToeGame {
 	 */
 	public static void boardPrinter(String[][] game) 
 	{
-		System.out.println("  1 2 3");
+	    System.out.println("  1 2 3");
 	    //This prints out the text for the columns and skips a line.
 	    char rowLabel='A';
 	    //This declares a new char that is set equal to A for the rows.
 	    for(int i=0;i<=game.length-1;i++) 
 	    //This goes through the whole array looping for rows.
-		//Traverses through the columns.
+	    //Traverses through the columns.
 	    {
 	        System.out.print(rowLabel+" ");
 	        //This prints out the text with the rowLabel.
 	        for(int j=0;j<=game[i].length-1;j++) 
 	        //This goes through the whole array looping for columuns.
-			//Traverses through the rows.
+		//Traverses through the rows.
 	        {
 	            System.out.print(game[i][j]+" ");
 	            //This prints out the element at the index i for row element and the index j for column element.
