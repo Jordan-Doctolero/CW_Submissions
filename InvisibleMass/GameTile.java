@@ -2,6 +2,7 @@
  * This class keeps track to the game itself and how it will check if it is applied.
  */
 public class GameTile {
+	
 	//Data Attributes
 	
        /**
