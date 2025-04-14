@@ -10,22 +10,22 @@ import java.util.Scanner;
  */
 public class Main {
 	
-	 public static final int size=5;
-	 //This declares an int with a final value of 5.
-	 public static int goalRow=0;
-	 //This declares an int with a value of 0 for the goal of the row.
-	 public static int goalCol=0;
-	 //This declares an int with a value of 0 for the goal of the column.
-     public static GameTile[][] board=new GameTile[size][size];
-     //This declares a new board with the attributes of the GameTile class passed the parameters.
-     public static ThePlayer player=new ThePlayer();
-     //This declares a new player with the attributes of the ThePlayer class.
+	public static final int size=5;
+	//This declares an int with a final value of 5.
+	public static int goalRow=0;
+	//This declares an int with a value of 0 for the goal of the row.
+	public static int goalCol=0;
+	//This declares an int with a value of 0 for the goal of the column.
+	public static GameTile[][] board=new GameTile[size][size];
+	//This declares a new board with the attributes of the GameTile class passed the parameters.
+	public static ThePlayer player=new ThePlayer();
+	//This declares a new player with the attributes of the ThePlayer class.
 
-     /*
-      * This is where the magic happens.
-      * We will be calling the methods in order to run the game.
-      * This will keep track of all things we need for the invisible maze.
-      */
+	/*
+	* This is where the magic happens.
+	* We will be calling the methods in order to run the game.
+	* This will keep track of all things we need for the invisible maze.
+	*/
 	public static void main(String[] args) {
 		initializeBoard(board);
 		//This calls the method to initialize and create the actual game board.
@@ -34,28 +34,28 @@ public class Main {
 		
 		Scanner gameInput=new Scanner(System.in);
 		//This declares a Scanner object.
-        boolean playing=true;
-        //This declares a boolean set equal first to true.
+        	boolean playing=true;
+        	//This declares a boolean set equal first to true.
         
-        while(playing)
-        //While the condition is met, this runs.
-        {
-        	boardPrinter(board);
-        	//This calls the method and passes it the board.
-        	System.out.println(" ");
-        	//This skips a line to make it look neater.
-        	System.out.println("Make a move to escape the maze!");
-        	//This prints the text shown and skips a line.
-        	System.out.print("(W = up, S = down, A = left, D = right):");
-        	//This prints out the text shown.
-            String move=gameInput.nextLine();
-            //This takes the input the player made and is made the String of their move.
-            playing=playerMove(move);
-            //This sets the boolean equal to whatever is returned from the method that is passed the move the player makes.
-        }
+        	while(playing)
+        	//While the condition is met, this runs.
+        	{
+        		boardPrinter(board);
+        		//This calls the method and passes it the board.
+        		System.out.println(" ");
+        		//This skips a line to make it look neater.
+        		System.out.println("Make a move to escape the maze!");
+        		//This prints the text shown and skips a line.
+        		System.out.print("(W = up, S = down, A = left, D = right):");
+        		//This prints out the text shown.
+            		String move=gameInput.nextLine();
+            		//This takes the input the player made and is made the String of their move.
+            		playing=playerMove(move);
+            		//This sets the boolean equal to whatever is returned from the method that is passed the move the player makes.
+        	}
         
-        gameInput.close();
-        //This closes the scanner to avoid any leaks.
+        	gameInput.close();
+        	//This closes the scanner to avoid any leaks.
 		
 	}
 	
@@ -69,13 +69,13 @@ public class Main {
 		//Traverses through the columns.
 		{
 			for(int j=0;j<=board[i].length-1;j++)  
-            //This goes through the whole array looping for columns.
-    		//Traverses through the rows.
-            {
-                board[i][j]=new GameTile();
-                //This sets the index at i and j equal to a new value that replaces the null in it.
-            }
-        }
+            		//This goes through the whole array looping for columns.
+    			//Traverses through the rows.
+            		{
+                		board[i][j]=new GameTile();
+                		//This sets the index at i and j equal to a new value that replaces the null in it.
+            		}
+        	}
 	}
 	
 	/*
@@ -86,126 +86,125 @@ public class Main {
 	{
 		int randomMaze=(int)(Math.random()*3)+1;
 		//This chooses a random number of 1 or 2 to choose the random Player.
-	    if(randomMaze==1) 
-	    //If the number from Math.random is equal to 1, this runs.
-	    {
-	    	board[0][2].setIsWall(true);
-	    	//This sets a wall at the coordinates.
-	        board[0][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[0][4].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[1][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][4].setIsWall(true);
-	        //This sets a wall at the coordinates.
-
-	        board[0][0].setHasPlayer(true);
-	        //This sets where the assumption of where the player is in the ThePlayer class.
-	        board[0][0].setIsRevealed(true);
-	        //This sets where the assumption of where the revealed tile is in the ThePlayer class.
-	        
-	        player.setRPos(0);
-	        //This sets the players Row.
-	        player.setCPos(0);
-	        //This sets the players Column.
-	        
-	        goalRow=4;
-	        //This sets the goal of the Row.
-	        goalCol=2;
-	        //This sets the goal of the Column.   
-	    } 
+		if(randomMaze==1) 
+		//If the number from Math.random is equal to 1, this runs.
+	    	{
+	    		board[0][2].setIsWall(true);
+		    	//This sets a wall at the coordinates.
+		        board[0][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[0][4].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[1][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][4].setIsWall(true);
+		        //This sets a wall at the coordinates.
+	
+		        board[0][0].setHasPlayer(true);
+		        //This sets where the assumption of where the player is in the ThePlayer class.
+		        board[0][0].setIsRevealed(true);
+		        //This sets where the assumption of where the revealed tile is in the ThePlayer class.
+		        
+		        player.setRPos(0);
+		        //This sets the players Row.
+		        player.setCPos(0);
+		        //This sets the players Column.
+		        
+		        goalRow=4;
+		        //This sets the goal of the Row.
+		        goalCol=2;
+		        //This sets the goal of the Column.   
+	    	} 
 	    
-	    else if(randomMaze==2) 
+	    	else if(randomMaze==2) 
 		//If the number from Math.random is equal to 2, this runs.
 		{
-	    	board[1][1].setIsWall(true);
-	    	//This sets a wall at the coordinates.
-	        board[1][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][0].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[4][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
+		    	board[1][1].setIsWall(true);
+		    	//This sets a wall at the coordinates.
+		        board[1][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][0].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[4][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
 
-		    board[4][4].setHasPlayer(true);
-		    //This sets where the assumption of where the player is in the ThePlayer class.
-		    board[4][4].setIsRevealed(true);
-		    //This sets where the assumption of where the revealed tile is in the ThePlayer class.
+		   	board[4][4].setHasPlayer(true);
+		    	//This sets where the assumption of where the player is in the ThePlayer class.
+		    	board[4][4].setIsRevealed(true);
+		    	//This sets where the assumption of where the revealed tile is in the ThePlayer class.
 		    
-		    player.setRPos(4);
-		    //This sets the players Row.
-	        player.setCPos(4);
-	        //This sets the players Column.
+		    	player.setRPos(4);
+		    	//This sets the players Row.
+	        	player.setCPos(4);
+	        	//This sets the players Column.
 	        
-	        goalRow=1;
-	        //This sets the goal of the Row.
-	        goalCol=0;
-	        //This sets the goal of the Column.        
-		 } 
+	        	goalRow=1;
+	        	//This sets the goal of the Row.
+	        	goalCol=0;
+	        	//This sets the goal of the Column.        
+		} 
 	        
-	    else 
-	    //In any other case(3), this runs.
-	    {
-	    	board[0][1].setIsWall(true);
-	    	//This sets a wall at the coordinates.
-	        board[0][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[1][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][1].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[2][3].setIsWall(true);
-	        //This sets a wall at the coordinates.
-	        board[3][2].setIsWall(true);
-	        //This sets a wall at the coordinates.
-
-	        board[2][2].setHasPlayer(true);
-	        //This sets where the assumption of where the player is in the ThePlayer class.
-	        board[2][2].setIsRevealed(true);
-	        //This sets where the assumption of where the revealed tile is in the ThePlayer class.
-
-	        player.setRPos(2);
-	        //This sets the players Row.
-	        player.setCPos(2);
-	        //This sets the players Column.
-	        
-	        goalRow=0;
-	        //This sets the goal of the Row.
-	        goalCol=0;
-	        //This sets the goal of the Column.  
-	    }
-	    
+	    	else 
+		//In any other case(3), this runs.
+		{
+			board[0][1].setIsWall(true);
+		    	//This sets a wall at the coordinates.
+		        board[0][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[1][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][1].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[2][3].setIsWall(true);
+		        //This sets a wall at the coordinates.
+		        board[3][2].setIsWall(true);
+		        //This sets a wall at the coordinates.
+	
+		        board[2][2].setHasPlayer(true);
+		        //This sets where the assumption of where the player is in the ThePlayer class.
+		        board[2][2].setIsRevealed(true);
+		        //This sets where the assumption of where the revealed tile is in the ThePlayer class.
+	
+		        player.setRPos(2);
+		        //This sets the players Row.
+		        player.setCPos(2);
+		        //This sets the players Column.
+		        
+		        goalRow=0;
+		        //This sets the goal of the Row.
+		        goalCol=0;
+		        //This sets the goal of the Column.  
+		    }
 	}
 	
 	/*
@@ -216,28 +215,28 @@ public class Main {
 		System.out.println("╔═══════╗");
 		//This prints the top of the border and skips a line.
 		for(int i=0;i<=board.length-1;i++) 
-	    //This goes through the whole array looping for rows.
+	    	//This goes through the whole array looping for rows.
 		//Traverses through the columns.
-	    {
+	    	{
 			System.out.print("║");
-	        //This prints out the sides of the border.
-	        for(int j=0;j<=board[i].length-1;j++) 
-	        //This goes through the whole array looping for columns.
+	        	//This prints out the sides of the border.
+	        	for(int j=0;j<=board[i].length-1;j++) 
+	        	//This goes through the whole array looping for columns.
 			//Traverses through the rows.
-	        {
-	        	System.out.print(board[i][j].toString());
-	            //This prints out the element at the index i for row element and the index j for column element.
-	        	//Uses the toString method to print out any element that is there without the code.
-	        }
+	        	{
+	        		System.out.print(board[i][j].toString());
+	            		//This prints out the element at the index i for row element and the index j for column element.
+	        		//Uses the toString method to print out any element that is there without the code.
+	        	}
 	        
-	        System.out.println("║");
-	        //This prints out the other small side of the border and skips a line
-	    }
+	        	System.out.println("║");
+	        	//This prints out the other small side of the border and skips a line
+	        }
         
-		System.out.println("╚═══════╝");
+	System.out.println("╚═══════╝");
         //This prints out the bottom of the border and skips a line.
 		
-    }
+       }
 	
 	/*
 	 * This method handles the logic to check and make the players move.
@@ -354,12 +353,12 @@ public class Main {
 	 */
 	public static boolean isInBounds(int r, int c) 
 	{
-        if(r>=0 && r<size && c>=0 && c<size)
-        //If the conditions are met, this runs.
-        {
-        	return true;
-        	//Returns true for in bounds.
-        }
+        	if(r>=0 && r<size && c>=0 && c<size)
+        	//If the conditions are met, this runs.
+        	{
+        		return true;
+        		//Returns true for in bounds.
+        	}
         
         return false;
         //Else returns false for out of bounds.
