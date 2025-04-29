@@ -18,9 +18,9 @@ public class TwoDArraySorter {
 		double[][] theArray=
 		//This declares a new double 2D array.
 		{
-				{3.4, 3.1, 2.9, 4.1},
-				{1.1, 0.9, 2.4, 8.1}
-				//This has two rows and four columns.
+			{3.4, 3.1, 2.9, 4.1},
+			{1.1, 0.9, 2.4, 8.1}
+			//This has two rows and four columns.
 		};
 		
 		System.out.println("Task 1:");
@@ -46,9 +46,9 @@ public class TwoDArraySorter {
 		double[][] theArrays=
 		//This declares a new double 2D array.
 		{
-				{3.4, 3.1, 2.9, 4.1},
-				{1.1, 0.9, 2.4, 8.1}
-				//This has two rows and four columns.
+			{3.4, 3.1, 2.9, 4.1},
+			{1.1, 0.9, 2.4, 8.1}
+			//This has two rows and four columns.
 		};
 		
 		System.out.println("Task 2:");
@@ -79,66 +79,66 @@ public class TwoDArraySorter {
 	{
 		int rows=nums.length;
 		//This declares a new int of the length of the whole array for rows.
-        int cols=nums[0].length;
-        //This declares a new int of the length of the whole 1st array for column.
-        double[] oneArray=new double[rows*cols];
-        //This multiplies all to declare a new double array with all elements.
-         
-        int index=0;
-        //This declares a new int variable with a value of 0.
+        	int cols=nums[0].length;
+        	//This declares a new int of the length of the whole 1st array for column.
+	        double[] oneArray=new double[rows*cols];
+	        //This multiplies all to declare a new double array with all elements.
+	         
+	        int index=0;
+	        //This declares a new int variable with a value of 0.
+	        
+	        for(int i=0;i<rows;i++) 
+	        //This iterates through the rows.
+	        {
+	            for(int j=0;j<cols;j++) 
+	            //This iterates through the columns.
+	            {
+	            	oneArray[index]=nums[i][j];
+	            	//This sets the new array at the index equal to the number at i/j of the double array.
+	                index++;
+	                //Adds 1 to the index.
+	            }
+        	}
         
-        for(int i=0;i<rows;i++) 
-        //This iterates through the rows.
-        {
-            for(int j=0;j<cols;j++) 
-            //This iterates through the columns.
-            {
-            	oneArray[index]=nums[i][j];
-            	//This sets the new array at the index equal to the number at i/j of the double array.
-                index++;
-                //Adds 1 to the index.
-            }
-        }
+        	/*
+         	 * This is bubble sort for a 2D Array.
+        	 */
+        	for(int i=0;i<oneArray.length-1;i++) 
+    		//This goes through the whole array looping for rows.
+    		//Traverses through the columns.
+   	    	{
+	   	        for(int j=0;j<oneArray.length-1-i;j++) 
+	   	        //This goes through the whole array looping for columuns.
+	   		//Traverses through the rows.
+	   	        {
+	   			if (oneArray[j]>oneArray[j+1]) 
+	   	        	//If the number at index j is less than the one next to it, this runs to swap.
+	   	        	{
+	                    		double temp=oneArray[j];
+		                    	//This declares a new temp variable with the value of the single Array element at j.
+		                    	oneArray[j]=oneArray[j+1];
+		                    	//This sets the value at j of the new array to the one next to it.
+		                    	oneArray[j+1]=temp;
+		                   	//This sets the the element of the new array at j+1 equal to the temp.
+		                }
+	    	    	}
+	    	}
         
-        /*
-         * This is bubble sort for a 2D Array.
-         */
-        for(int i=0;i<oneArray.length-1;i++) 
-    	//This goes through the whole array looping for rows.
-    	//Traverses through the columns.
-   	    {
-   	        for(int j=0;j<oneArray.length-1-i;j++) 
-   	        //This goes through the whole array looping for columuns.
-   			//Traverses through the rows.
-   	        {
-   	        	if (oneArray[j]>oneArray[j+1]) 
-   	        	//If the number at index j is less than the one next to it, this runs to swap.
-   	        	{
-                    double temp=oneArray[j];
-                    //This declares a new temp variable with the value of the single Array element at j.
-                    oneArray[j]=oneArray[j+1];
-                    //This sets the value at j of the new array to the one next to it.
-                    oneArray[j+1]=temp;
-                    //This sets the the element of the new array at j+1 equal to the temp.
-                }
-    	    }
-    	}
-        
-        index=0;
-        //This sets index back to 0.
-        
-        for(int i=0;i<rows;i++) 
-        //This iterates through the rows.
-        {
-            for(int j=0;j<cols;j++) 
-            //This iterates through the columns.
-            {
-                nums[i][j]=oneArray[index];
-                //This sets the value at i/j to the value of the new Array at the index.
-                index++;
-                //Adds one to the index.
-            }
-        }
+	        index=0;
+	        //This sets index back to 0.
+	        
+	        for(int i=0;i<rows;i++) 
+	        //This iterates through the rows.
+	        {
+	            for(int j=0;j<cols;j++) 
+	            //This iterates through the columns.
+	            {
+	                nums[i][j]=oneArray[index];
+	                //This sets the value at i/j to the value of the new Array at the index.
+	                index++;
+	                //Adds one to the index.
+	            }
+	        }
 	}
 	
 	/*
@@ -150,66 +150,66 @@ public class TwoDArraySorter {
 	{
 		int rows=nums.length;
 		//This declares a new int of the length of the whole array for rows.
-        int cols=nums[0].length;
-        //This declares a new int of the length of the whole 1st array for column.
-        double[] oneArray=new double[rows*cols];
-        //This multiplies all to declare a new double array with all elements.
-         
-        int index=0;
-        //This declares a new int variable with a value of 0.
+        	int cols=nums[0].length;
+        	//This declares a new int of the length of the whole 1st array for column.
+        	double[] oneArray=new double[rows*cols];
+	        //This multiplies all to declare a new double array with all elements.
+	         
+	        int index=0;
+	        //This declares a new int variable with a value of 0.
+	        
+	        for(int j=0;j<cols;j++) 
+	        //This iterates through the rows.
+	        {
+	            for(int i=0;i<rows;i++) 
+	            //This iterates through the columns.
+	            {
+	            	oneArray[index]=nums[i][j];
+	            	//This sets the new array at the index equal to the number at i/j of the double array.
+	                index++;
+	                //Adds 1 to the index.
+	            }
+	        }
         
-        for(int j=0;j<cols;j++) 
-        //This iterates through the rows.
-        {
-            for(int i=0;i<rows;i++) 
-            //This iterates through the columns.
-            {
-            	oneArray[index]=nums[i][j];
-            	//This sets the new array at the index equal to the number at i/j of the double array.
-                index++;
-                //Adds 1 to the index.
-            }
-        }
+	        /*
+	         * This is bubble sort for a 2D Array.
+	         */
+	        for(int i=0;i<oneArray.length-1;i++) 
+	    	//This goes through the whole array looping for rows.
+	    	//Traverses through the columns.
+	   	{
+	   		for(int j=0;j<oneArray.length-1-i;j++) 
+	   	        //This goes through the whole array looping for columuns.
+	   		//Traverses through the rows.
+	   	        {
+	   	        	if (oneArray[j]>oneArray[j+1]) 
+	   	        	//If the number at index j is less than the one next to it, this runs to swap.
+	   	        	{
+	                   	 	double temp=oneArray[j];
+	                    		//This declares a new temp variable with the value of the single Array element at j.
+	                   	 	oneArray[j]=oneArray[j+1];
+	                    		//This sets the value at j of the new array to the one next to it.
+	                    		oneArray[j+1]=temp;
+	                    		//This sets the the element of the new array at j+1 equal to the temp.
+	                	}
+	    	        }
+	    	}
         
-        /*
-         * This is bubble sort for a 2D Array.
-         */
-        for(int i=0;i<oneArray.length-1;i++) 
-    	//This goes through the whole array looping for rows.
-    	//Traverses through the columns.
-   	    {
-   	        for(int j=0;j<oneArray.length-1-i;j++) 
-   	        //This goes through the whole array looping for columuns.
-   			//Traverses through the rows.
-   	        {
-   	        	if (oneArray[j]>oneArray[j+1]) 
-   	        	//If the number at index j is less than the one next to it, this runs to swap.
-   	        	{
-                    double temp=oneArray[j];
-                    //This declares a new temp variable with the value of the single Array element at j.
-                    oneArray[j]=oneArray[j+1];
-                    //This sets the value at j of the new array to the one next to it.
-                    oneArray[j+1]=temp;
-                    //This sets the the element of the new array at j+1 equal to the temp.
-                }
-    	    }
-    	}
+        	index=0;
+        	//This sets index back to 0.
         
-        index=0;
-        //This sets index back to 0.
-        
-        for(int j=0;j<cols;j++) 
-        //This iterates through the rows.
-        {
-            for(int i=0;i<rows;i++) 
-            //This iterates through the columns.
-            {
-                nums[i][j]=oneArray[index];
-                //This sets the value at i/j to the value of the new Array at the index.
-                index++;
-                //Adds one to the index.
-            }
-        }
+	        for(int j=0;j<cols;j++) 
+	        //This iterates through the rows.
+	        {
+	            for(int i=0;i<rows;i++) 
+	            //This iterates through the columns.
+	            {
+	                nums[i][j]=oneArray[index];
+	                //This sets the value at i/j to the value of the new Array at the index.
+	                index++;
+	                //Adds one to the index.
+	            }
+	        }
 	}
 	
 	/*
@@ -217,18 +217,17 @@ public class TwoDArraySorter {
 	 */
 	public static void arrayPrinter(double[][] nums) 
 	{
-
-	    for(int i=0;i<=nums.length-1; i++) 
-	    //This goes through the whole array looping for rows.
+		for(int i=0;i<=nums.length-1; i++) 
+	    	//This goes through the whole array looping for rows.
 		//Traverses through the columns.
-	    {
-	        for(int j=0;j<=nums[i].length-1;j++) 
-	        //This goes through the whole array looping for columuns.
+	    	{
+	        	for(int j=0;j<=nums[i].length-1;j++) 
+	        	//This goes through the whole array looping for columuns.
 			//Traverses through the rows.
-	        {
-	            System.out.print(nums[i][j] + " ");
-	            //This prints out the element at the index i for row element and the index j for column element.
-	        }
+	        	{
+	            		System.out.print(nums[i][j] + " ");
+	            		//This prints out the element at the index i for row element and the index j for column element.
+	        	}
 	        
 	        System.out.println();
 	        //This skips a linet to make it look neater.
