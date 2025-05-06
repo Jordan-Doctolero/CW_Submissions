@@ -6,7 +6,7 @@ public class Dog {
 	//Data Attributes
 	
 	/**
-     * This creates private data. Basically the numbers we will pass it.
+         * This creates private data. Basically the numbers we will pass it.
 	 * It is also what the class needs in order to function.
 	 */
 	
@@ -41,8 +41,8 @@ public class Dog {
 	
 	/**
 	 * This is what the class is going to do when I call it in the main method.
-     * These are setters and getters to run the nature of the game.
-     * They take things from the data attributes and constructors.
+         * These are setters and getters to run the nature of the game.
+         * They take things from the data attributes and constructors.
 	 */
 	
 	/*
