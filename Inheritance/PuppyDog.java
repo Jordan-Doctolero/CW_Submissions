@@ -36,8 +36,8 @@ public class PuppyDog extends Dog{
 		
 	/**
 	 * This is what the class is going to do when I call it in the main method.
-     * These are setters and getters to run the nature of the game.    
-     * They take things from the data attributes and constructors.
+         * These are setters and getters to run the nature of the game.    
+         * They take things from the data attributes and constructors.
 	 */
 
 	/*
